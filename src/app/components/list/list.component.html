@@ -1,0 +1,34 @@
+<h3>Event List</h3>
+<hr />
+<div class="row">
+<div class="col-md-12">
+<div>
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Type</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let event of eventlist">
+                <tr>
+                    <td>{{event.id}}</td>
+                    <td>{{event.name | uppercase}}</td>
+                    <td>{{event.description}}</td>
+                    <td>{{event.type}}</td>
+                    <td><button class="btn btn-primary">Edit</button></td>
+                    <td><button class="btn btn-danger">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+</div>
+</div>
